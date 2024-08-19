@@ -58,7 +58,7 @@ const About = () => {
     <section id="about-us" className={styles.about}>
       <div className={styles['about-header']}>
         <h3>About Us</h3>
-        <p>A top-tier team deeply experienced in real estate, startups, and technology.</p>
+        <p>RAQT is at the forefront of data-driven innovation. Established in [Year], our mission is to harness the power of data to drive financial excellence. We offer advanced solutions in research, quantitative analysis, fintech development, and data analytics, tailored to meet the needs of our diverse clientele.</p>
       </div>
       <div className={styles['about-content']}>
         <Grid container columnSpacing={2} rowSpacing={2}>
