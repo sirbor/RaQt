@@ -33,7 +33,7 @@ const Financial = () => {
     <section className={styles.financial}>
       <div className={styles['financial-header']}>
         {/* <h6>SPONSORS</h6> */}
-        <h3>As an Owner you have financial needs that should drive your capital decisions</h3>
+        <h3>Empower Your Fintech Strategy with Data-Driven Insights, Smart Portfolio Management, and Streamlined Financial Solutions.</h3>
       </div>
       <div className={styles['financial-content']}>
         <Grid container rowSpacing={3} columnSpacing={2}>

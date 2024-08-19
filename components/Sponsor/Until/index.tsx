@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import styles from './Until.module.scss';
 
 const untilNow = [
-  'LP control rights over major decisions including sale/refinancing',
-  'Capital gains taxes, deal level transfer taxes/other transaction costs',
-  'Need to actively seek reinvestment options for sale proceeds',
-  'Diverse LP base asking repetitive, distracting questions',
+  'Analyze market trends and consumer behavior to identify growth opportunities through detailed reports and forecasts.',
+  'Evaluate competitors strategies and market positioning to provide reports and recommendations for enhancing competitive advantage.',
+  'Tailor research to address specific business challenges and deliver customized reports with actionable insights.',
+  'Predict future market trends using historical data to guide strategic planning with forecast reports.',
 ];
 
 const withPillar = [
-  'You maintain control, just like a fund GP',
-  'Avoid inopportune sales while still providing liquidity to LPs',
-  'You maintain ownership, preserving asset management fees and deferring taxes/costs of a whole asset sale',
-  "Comprehensive reporting and LP forum enables investors to answer each others' questions",
+  'Create predictive models using statistical and machine learning techniques to forecast trends and scenarios.P',
+  'Develop and optimize custom algorithms for financial tasks, including performance evaluation and backtesting.',
+  'Assess financial risks with quantitative models and stress testing to provide risk management reports and recommendations.',
+  "Clean and prepare data for analysis by handling inconsistencies and delivering reliable datasets.",
 ];
 
 const Until: React.FC = () => {
@@ -30,7 +30,7 @@ const Until: React.FC = () => {
               </div>
               <p>Then</p>
             </div> */}
-            <h1>Status Quo</h1>
+            <h1>Research</h1>
             {untilNow.map((el, idx) => (
               <div key={idx} className={styles['until-now-item']}>
                 <img src={`/sponsor/${matches ? 'remove.svg' : 'arrow-left.svg'}`} alt="plus-icon" />
@@ -47,7 +47,7 @@ const Until: React.FC = () => {
               </div>
               <p>Now</p>
             </div> */}
-            <h1 className={styles['right']}>With Pillar</h1>
+            <h1 className={styles['right']}>Data Solutions</h1>
             {withPillar.map((el, idx) => (
               <div key={idx} className={styles['until-now-item']}>
                 <img src={`/sponsor/check.svg`} alt="check" />

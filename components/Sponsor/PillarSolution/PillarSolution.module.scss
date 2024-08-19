@@ -1,4 +1,6 @@
 .pillar-solution {
+  background-color: #2A5864; // Dark green background color
+
   &-header {
     padding: 74px 48px 0px;
     align-items: center;
@@ -12,13 +14,21 @@
 
   &-content {
     padding: 0px 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 72px;
+      padding: 32px;
+      background: #ffffff;
+      border: 2px solid #4CAF50; // Greenish border color
+      border-radius: 8px; // Rounded corners
+      margin: 16px; // Space between items
+      flex: 1 1 calc(33.333% - 32px); // Make all items the same size
 
       h6 {
         display: none;

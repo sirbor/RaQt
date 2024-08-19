@@ -7,18 +7,17 @@ const HowItWorks: React.FC = () => {
   return (
     <section className={styles['how-it-works']}>
       <h3>How it Works</h3>
-      <h6>Our process for owners of institutional-quality assets</h6>
+      <h6>Provide actionable insights through market analysis and data-driven algorithms.</h6>
       <p>
-        Pillar underwrites the GP <span>to institutional standards</span>
+        RAQT provides data <span>to institutional standards</span>
       </p>
 
       <div className={styles['how-it-works-cards']}>
         <div className={styles['how-it-works-cards-small']}>
           <WarningAmberOutlinedIcon htmlColor="#FFD130" />
-          <h4>GP does not pass due diligence</h4>
+          <h4>Data does not pass due diligence</h4>
           <p>
-            <span>Pillar works with GP</span> to shore up shortfalls by introducing third-party service
-            providers and/or instituting asset management oversight
+            <span>Data remains unreliable,</span> halting further processes as the analysis cannot proceed with poor-quality data.
           </p>
         </div>
         <div className={styles['how-it-works-cards-icon']}>
@@ -26,23 +25,22 @@ const HowItWorks: React.FC = () => {
         </div>
         <div className={styles['how-it-works-cards-large']}>
           <CheckCircleOutlineIcon htmlColor="#00838F" />
-          <h4>GP passes due diligence</h4>
+          <h4>Data passes due diligence</h4>
           <div className={styles['how-it-works-cards-large-row']}>
-            <p>Sponsor and Asset are onboarded onto platform</p>
+            <p>Data is cleaned and organized, ready for Advanced Data Modelin</p>
 
             <div className={styles['how-it-works-cards-large-row-icon']}>
               <ArrowForwardIosIcon />
             </div>
 
             <p>
-              Pillar may close the asset on balance sheet and syndicate the risk or offer for best efforts
-              execution
+            Predictive models are developed and validated, ready for Algorithm Development.
             </p>
 
             <div className={styles['how-it-works-cards-large-row-icon']}>
               <ArrowForwardIosIcon />
             </div>
-            <p>Post-close ongoing asset reporting via automated ingestion of financial data</p>
+            <p>Functional algorithms are delivered with performance reports and deployment plans.</p>
           </div>
         </div>
       </div>

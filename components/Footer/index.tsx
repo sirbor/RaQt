@@ -22,29 +22,13 @@ const Footer = () => {
       </div>
       <div className={styles['footer-section-disclaimer']}>
         <p>
-          Past performance in no guarantee of future results. Any historical returns, expected returns, or
-          probability projections may not reflect actual future performance and are provided by the sponsor of
-          the investment opportunity and subject to change. All securities involve risk and may result in
-          partial or total loss. Neither Pillar Markets Inc. nor any of its affiliates provide tax advice and
-          do represent in any manner that the outcomes described herein will result in any particular tax
-          treatment. Securities are offered through{' '}
-          <a href="https://www.finalis.com/" target="_blank" rel="noopener noreferrer">
-            Finalis Securities LLC
-          </a>{' '}
-          Member{' '}
-          <a href="https://www.finra.org/" target="_blank" rel="noopener noreferrer">
-            FINRA
-          </a>
-          /
-          <a href="https://www.sipc.org/" target="_blank" rel="noopener noreferrer">
-            SIPC
-          </a>
-          . Pillar Markets Inc. and Finalis Securities LLC are separate, unaffiliated entities.
+        Past performance does not guarantee future results; historical data and projections may not reflect actual future performance, and all solutions involve risk and may result in partial or total loss.
+        RAQT Solutions Inc. entities.
         </p>
       </div>
       <footer>
-        <p>Copyright &copy; {new Date().getFullYear()} Pillar Markets Inc.</p>
-        <Link href="/sponsor">Sponsors</Link>
+        <p>Copyright &copy; {new Date().getFullYear()} RAQT Solutions Inc.</p>
+        <Link href="/sponsor">Home</Link>
         <Link href="/career">Careers</Link>
         <Link href="/terms-of-service">Terms of Service</Link>
         <Link href="/privacy-and-cookies">Privacy and Cookies</Link>
