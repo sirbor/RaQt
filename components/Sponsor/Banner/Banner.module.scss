@@ -6,10 +6,11 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: black; // Dark background
   display: flex;
   justify-content: flex-start;
-  color: #000;
+  color: #e0e0e0; // Slightly darker white color
+
   &::before {
     content: '';
     position: absolute;
@@ -24,6 +25,7 @@
     z-index: 2;
     margin-top: 90px;
     max-width: min(100%, 1024px);
+
     .button-container {
       margin-top: 32px;
     }
@@ -44,18 +46,21 @@
         border-radius: 4px;
         margin-right: 16px;
       }
+
       h6 {
         color: #e72d65;
         font-size: 14px;
         line-height: 20px;
       }
     }
+
     h1 {
       max-width: min(100%, 1024px);
       font-size: 56px;
       line-height: 64px;
       margin-top: 18px;
       margin-bottom: 32px;
+      color: #f0ead6; // Pearl white color
     }
   }
 
@@ -64,7 +69,11 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
-    color: black;
+    color: #f0ead6; // Pearl white color
+  }
+
+  .shinyText {
+    color: #f0ead6; // Pearl white color
   }
 }
 
@@ -72,11 +81,13 @@
   .banner {
     &-content {
       margin-top: 50%;
+
       h1 {
         margin-top: 32px;
         font-weight: 500;
         font-size: 32px;
         line-height: 38px;
+        color: #f0ead6; // Pearl white color
       }
     }
 
@@ -84,9 +95,11 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
+      color: #f0ead6; // Pearl white color
     }
   }
 }
+
 @media screen and (max-width: 900px) and (orientation: landscape) {
   .banner {
     p {
@@ -94,12 +107,15 @@
         font-size: 14px !important;
         line-height: 16px !important;
         margin-bottom: 16px !important;
+        color: #f0ead6; // Pearl white color
       }
     }
+
     h1 {
       margin-top: 12px;
       font-size: 2rem;
       line-height: 40px;
+      color: #f0ead6; // Pearl white color
     }
   }
 }

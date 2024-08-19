@@ -99,12 +99,12 @@ const CTA = () => {
       <div className={styles['cta-content']}>
         <div className={styles['cta-content-part']}>
           <h4>Connect With Us</h4>
-          <p>Speak to a team member to learn more about the Pillar commercial real estate marketplace.</p>
+          <p>Speak to a team member to learn more about the RAQT Solutions.</p>
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: '30px' }}>
             <EmailIcon />
             <span style={{ marginLeft: '20px' }}>
-              <a href="mailto:info@pillarmarkets.com">info@pillarmarkets.com</a>
+              <a href="mailto:info@pillarmarkets.com">info@raqtsolutions.io</a>
             </span>
           </div>
         </div>

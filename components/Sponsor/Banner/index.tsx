@@ -16,10 +16,9 @@ const Banner: React.FC<Props> = ({ imgSrc }) => {
           </div>
           <h6>SOLUTIONS</h6>
         </div>
-        <h1>Solve Your Capital Needs By Accessing Interim Liquidity & Retaining Control</h1>
-        <p className={`${styles['large']} large`}>
-          The Pillar marketplace is designed to accommodate investor capital of varying time horizons and risk
-          profiles, solving liquidity needs across the deal lifecycle.
+        <h1>RAQT delivers research, quantitative analysis, fintech solutions, and data analytics to drive informed decisions and optimize operations.</h1>
+                <p className={`${styles['large']} ${styles.shinyText}`}>
+          RAQT provides expert research to guide strategic decisions. We deliver advanced quantitative analysis for data-driven insights. Our fintech solutions streamline financial operations with secure, innovative technology. Additionally, our data analytics unlock the potential of your data for optimized business performance.
         </p>
         <div className={styles['button-container']}>
           <button className="ui-button-2" onClick={() => handleMoveToId()}>

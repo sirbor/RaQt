@@ -9,8 +9,8 @@ const Footer = () => {
     <section className={styles['footer-section']}>
       <div className={styles['footer-section-content']}>
         <img src="/logo-white.png" alt="Pillar Markets Logo footer" width={120} height={60} />
-        <p>Digital Infrastructure Powering Private Real Estate</p>
-        <a href="mailto:info@pillarmarkets.com">info@pillarmarkets.com</a>
+        <p>Digital Infrastructure Powering Private Equity and Venture Captials in Africa</p>
+        <a href="mailto:info@pillarmarkets.com">info@raqtsolutions.io</a>
         <div className={styles['button-container']}>
           <a target="_blank" rel="noopener noreferrer" className={styles['icon']}>
             <LinkedInIcon fontSize="large" sx={{ color: 'white', fontSize: 28 }} />

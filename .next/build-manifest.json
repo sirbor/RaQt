@@ -29,6 +29,26 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/confidentiality-agreement": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/confidentiality-agreement.js"
+    ],
+    "/privacy-and-cookies": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/privacy-and-cookies.js"
+    ],
+    "/sponsor": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/sponsor.js"
+    ],
+    "/terms-of-service": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/terms-of-service.js"
     ]
   },
   "ampFirstPages": []

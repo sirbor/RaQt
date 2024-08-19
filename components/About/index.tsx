@@ -7,44 +7,44 @@ import styles from './About.module.scss';
 const people: PersonType[] = [
   {
     id: 1,
-    name: 'Anthony Dominguez',
-    avatar: '/people/1.png',
-    role: 'CHIEF EXECUTIVE OFFICER',
+    name: 'Dominic Bor',
+    avatar: '/people/1.jpeg',
+    role: 'Founder & CTO',
     summary:
-      'Real estate fintech entrepreneur (LEX, Vistia), global macro investments (Pharo, Lehman Brothers), IU Kelley',
-    description: `Anthony Dominguez is an experienced fintech entrepreneur, most recently as the founding president of LEX Markets, the commercial real estate platform which executed the first-ever IPO of a single-asset commercial real estate security. Prior to that he founded a home financing fintech company, Vistia, which was acquired by a competitor in 2017. He previously worked in capital markets focused primarily on emerging markets investments in FX, rates, and credit (Pharo Management, Lehman Brothers). Steven is a graduate of Indiana University's Kelley School of Business and is a CFA charterholder.`,
+      'Results-driven technologist, Full-stack development, Data architecture, Fintech innovation',
+    description: `Dominic Bor is a results-driven technologist with a strong background in full-stack development and a passion for innovation. As the driving force behind RAQT, Dominic has successfully led the development of scalable, secure applications that have significantly boosted user engagement and optimized performance. His expertise in Python, C/C++, and JavaScript, coupled with advanced frameworks, has enabled him to reduce vulnerabilities by 30% and automate 80% of data workflows. Dominic’s leadership in creating intelligent systems and enhancing data architecture has consistently delivered measurable improvements, including a 40% increase in content engagement rates. Fluent in English and Swahili, with a working knowledge of French, Dominic combines technical prowess with strategic vision, making him a key player in the fintech and data analytics space.`,
   },
 
   {
     id: 2,
     name: 'Anthony Dominguez',
-    avatar: '/people/1.png',
-    role: 'CHIEF INVESTMENT OFFICER',
+    avatar: '/people/4.jpg',
+    role: 'Software Engineer',
     summary:
-      'Institutional allocator (Purdue University endowment, INPRS), real estate private equity (Strategic Capital, Lehman Brothers), IU Kelley ',
+      'Senior Software Engineer (RAQT), Full-stack development (Python, JavaScript, C++), Cloud technologies (AWS, Docker)',
 
-    description: `Anthony Dominguez has 20+ years' experience in real estate, initially working in his family's hotels while in high school, then as an institutional real estate private equity investor (Lehman Brothers, Strategic Capital Partners), and for the last 10 years as an institutional allocator ($30bn INPRS, $4bn Purdue University endowment). Throughout his professional career, Sanjay has also managed his family's investments in farmland, hotels, and multifamily assets. Sanjay is a graduate of Indiana University's Kelley School of Business and is a CAIA charterholder.`,
+    description: `Anthony Dominguez is a skilled Software Engineer at RAQT, bringing extensive experience in full-stack development and a passion for creating innovative solutions. With expertise in languages such as Python, JavaScript, and C++, Anthony has played a pivotal role in developing and optimizing RAQT’s fintech and data analytics platforms. His deep understanding of frameworks like React and Django, combined with his proficiency in cloud technologies such as AWS and Docker, enables him to build scalable, secure applications that meet the highest industry standards. Anthony’s commitment to continuous improvement and his ability to troubleshoot complex technical challenges have led to significant enhancements in system performance and user experience. As a key member of the RAQT team, Anthony leverages his technical acumen to drive innovation and deliver solutions that exceed client expectations.`,
   },
 
   {
     id: 3,
-    name: 'Anthony Dominguez',
-    avatar: '/people/1.png',
-    role: 'CHIEF OPERATING OFFICER',
+    name: 'James Illara',
+    avatar: '/people/5.jpg',
+    role: 'Finance Assistant',
     summary:
-      'Startup executive (Second Measure), Securities Division (Goldman Sachs), Stanford GSB & Cornell Dyson School of Business ',
+      'CPA, Financial management, Budgeting, Financial reporting, Financial analysis, Forecasting',
 
-    description: `Anthony Dominguez has 17+ years of experience working with institutional investors and building businesses in both the financial services and technology start-up space. After 13 years at Goldman Sachs, Ed most recently was the Head of Sales and Customer Success at Second Measure, a data science technology company focused on providing analytics to institutional investors. Ed was  involved in managing sales/business development, product, and operations. His leadership helped scale Second Measure through growth to acquisition by Bloomberg LP in 2020. Ed holds degrees from the Stanford Graduate School of Business and Cornell University's Dyson School of Business.`,
+    description: `James Illara serves as the Finance Assistant at RAQT, where he leverages his CPA qualifications and financial expertise to manage the organization’s financial operations. With a strong background in accounting and financial management, James is responsible for overseeing budgeting, financial reporting, and ensuring compliance with financial regulations. His proficiency in financial analysis and forecasting has enabled RAQT to maintain fiscal discipline while supporting the company’s growth initiatives. James’s attention to detail and his ability to provide strategic financial insights are critical to RAQT’s success, ensuring that all financial decisions are data-driven and aligned with the company’s long-term objectives. His role is pivotal in ensuring that RAQT remains financially healthy and poised for continued growth in the competitive fintech landscape.`,
   },
 
   {
     id: 4,
-    name: 'Anthony Dominguez',
-    avatar: '/people/1.png',
-    role: 'CHIEF TECHNOLOGY OFFICER',
+    name: 'Farfalle Paya',
+    avatar: '/people/3.jpg',
+    role: 'Research Assistant',
     summary:
-      'Fintech CTO (Finitive), financial software engineering (Heidmar), Bangalore University (Engineering) ',
-    description: `Anthony Dominguez is a technology veteran bringing over 2 decades of experience in Engineering, Product, Analytics, Infrastructure and Cyber Security. Most recently, he built the technology powering Finitive, the institutional investment platform for private credit handling billions in transactions, and scaled their engineering organization in 4 different continents. Prior to that, Kiran spent over 15 years at a Morgan Stanley-backed global trading organization overseeing platforms and systems for freight trading, ERP, business intelligence, analytics, and risk management. Kiran holds an Engineering degree from Bangalore University.`,
+      'Legal research and analysis, Regulatory compliance, Contract law, Intellectual property rights',
+    description: `Farfalle Paya is a dedicated Research Assistant at RAQT, specializing in legal research and analysis. With a strong legal background, Farfalle brings a unique perspective to RAQT’s research initiatives, ensuring that all data-driven insights are grounded in sound legal principles. Her expertise in regulatory compliance, contract law, and intellectual property rights has been instrumental in guiding RAQT’s strategic decisions and maintaining adherence to legal standards across all projects. Farfalle’s meticulous approach to research, combined with her ability to synthesize complex legal information into actionable insights, makes her an invaluable asset to the team. Her contributions ensure that RAQT’s solutions are not only innovative and effective but also compliant with the ever-evolving legal landscape.`,
   },
 ];
 const About = () => {
@@ -58,9 +58,14 @@ const About = () => {
     <section id="about-us" className={styles.about}>
       <div className={styles['about-header']}>
         <h3>About Us</h3>
-        <p>RAQT is at the forefront of data-driven innovation. Our mission is to harness the power of data 
-          to drive financial excellence.We offer advanced solutions in research, quantitative analysis, 
-          fintech development, and data analytics, tailored to meet the needs of our diverse clientele.</p>
+        <p>
+          RAQT is at the forefront of data-driven innovation. Our mission is to harness the power of data 
+          to drive financial excellence.
+        </p>
+        <p>
+          We offer advanced solutions in research, quantitative analysis, fintech development, and data 
+          analytics, tailored to meet the needs of our diverse clientele.
+        </p>
       </div>
       <div className={styles['about-content']}>
         <Grid container columnSpacing={2} rowSpacing={2}>

@@ -7,22 +7,22 @@ import AccessibilityNewOutlinedIcon from '@mui/icons-material/AccessibilityNewOu
 
 const financial: FinancialType[] = [
   {
-    title: 'Portfolio Management',
+    title: 'Research',
     icon: <PieChartOutlineOutlinedIcon htmlColor="#e72d65" />,
 
-    content: 'Monetize a portion of gains to manage portfolio risk and/or recycle capital',
+    content: 'Thorough market research and data analysis are crucial for guiding fintech investment strategies and aligning them with your financial goals.',
   },
   {
-    title: 'Tax & Estate Planning',
+    title: 'Data',
     icon: <ReceiptLongOutlinedIcon htmlColor="#e72d65" />,
 
     content:
-      'Including all major capital decisions. No forced sales, no meddling LPs. Investors benefit from streamlined reporting and analytical tools.',
+      'Effective portfolio management in fintech relies on leveraging data to balance risk, optimize performance, and make informed decisions about capital allocation.',
   },
   {
-    title: 'Investor Relations',
+    title: 'Solutions',
     icon: <AccessibilityNewOutlinedIcon htmlColor="#e72d65" />,
-    content: 'Maintain strong LP relationships by offering  liquidity independent of a sale',
+    content: 'Streamlined tax and estate planning solutions ensure efficient management of financial decisions, avoiding forced sales and simplifying investor reporting.',
   },
 ];
 
