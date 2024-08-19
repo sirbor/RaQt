@@ -14,31 +14,31 @@ interface iPillarCards {
 const pillarCardsContent: iPillarCards[] = [
   {
     image: '/landingpage/institution-quality.png',
-    title: 'Institutional Quality',
-    subtitle: 'Investment & Operational Due Diligence, Deal Flow',
+    title: 'Research Solutions',
+    subtitle: 'Comprehensive market and competitive analysis.',
     description:
-      "Detailed vetting of sponsors' people, processes, systems, and track records coupled with comprehensive asset-level data to facilitate efficient investment due diligence.",
+      "Our Research Solutions provide in-depth market and competitive analysis to help you understand industry dynamics and identify growth opportunities. Through a blend of qualitative and quantitative research methods, we deliver comprehensive reports that highlight market trends, consumer behavior, and competitive positioning. Our tailored research reports address specific business challenges, offering actionable insights and strategic recommendations to guide your decision-making and drive success.",
   },
   {
     image: '/landingpage/data-first.png',
-    title: 'Data-First',
-    subtitle: 'Standardized Reporting & Customizable Analytics',
+    title: 'Quantitative Analysis',
+    subtitle: 'Advanced data modeling and risk management.',
     description:
-      'Incorporating alternative data sources and up-to-date information from property management and accounting software to support a systematic investment process.',
+      'RAQT’s Quantitative Analysis services include advanced data modeling and algorithm development to support sophisticated financial decision-making. We create predictive models and develop custom algorithms that solve complex financial problems, such as automated trading and risk assessment. Our risk assessment techniques evaluate credit, market, and operational risks, providing detailed reports and strategies to mitigate potential impacts and enhance financial stability.',
   },
   {
     image: '/landingpage/network-driven.png',
-    title: 'Network-Driven',
-    subtitle: 'Discovery, Diligence, & Monitoring',
+    title: 'Data Analytics',
+    subtitle: 'Business intelligence and data visualization.',
     description:
-      'Building confidence and facilitating transactions via a community of sophisticated investors: discuss new and ongoing deals, follow respected sponsors and investors.',
+      'RAQT’s Data Analytics services harness the power of big data to deliver actionable insights and drive business decisions. We utilize cutting-edge technologies to analyze large datasets and provide interactive business intelligence dashboards. Our data visualization tools present complex information in an easily understandable format, enabling you to make informed decisions and optimize your business strategies based on real-time data insights.',
   },
   {
     image: '/landingpage/capital-structure.png',
-    title: 'Capital Structure Solutions',
-    subtitle: 'From Acquisition to Recapitalization',
+    title: 'Fintech Solutions',
+    subtitle: 'Custom software development and payment integration.',
     description:
-      'A marketplace to accommodate investor capital of varying time horizons, solving the liquidity needs of both investors and sponsors.',
+      'Our Fintech Solutions focus on developing customized software and integrating payment systems to enhance your financial operations. We design and build bespoke fintech applications tailored to your needs, ensuring seamless integration with payment gateways like Stripe and Visa. Additionally, we offer virtual card solutions that support multiple currencies and transaction types, enhancing security and flexibility for your financial transactions.',
     path: '/sponsor',
   },
 ];
