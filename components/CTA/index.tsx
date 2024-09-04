@@ -104,7 +104,7 @@ const CTA = () => {
           <div style={{ display: 'flex', alignItems: 'center', marginTop: '30px' }}>
             <EmailIcon />
             <span style={{ marginLeft: '20px' }}>
-              <a href="mailto:info@pillarmarkets.com">info@raqtsolutions.io</a>
+              <a href="mailto:info@raqts.io">info@raqts.io</a>
             </span>
           </div>
         </div>
