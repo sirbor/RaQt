@@ -52,16 +52,28 @@ const Pillars = () => {
 
   return (
     <section className={styles.pillars}>
-      <h3>Our Pillars</h3>
+      <header className={styles['section-intro']}>
+        <span className={styles.eyebrow}>Capabilities</span>
+        <h3>Our pillars</h3>
+        <p className={styles.lead}>
+          Research, quantitative methods, analytics, and fintech—structured so teams can move from insight to
+          execution with clarity.
+        </p>
+      </header>
       <div className={styles['pillars-content']}>
-        <Grid container>
+        <Grid container spacing={3} sx={{ width: '100%' }}>
           {pillarCardsContent.map(({ title, subtitle, description, image, path }, index) => {
             const isLast = index === pillarCardsContent.length - 1;
             return (
-              <Grid item xs={12} sm={6} lg={3} key={index}>
+              <Grid item xs={12} sm={6} lg={3} key={index} sx={{ display: 'flex' }}>
                 <div
                   onClick={isLast ? handleNavigate : undefined}
-                  style={{ cursor: isLast ? 'pointer' : 'default', width: '100%' }}>
+                  style={{
+                    cursor: isLast ? 'pointer' : 'default',
+                    width: '100%',
+                    display: 'flex',
+                    flex: 1,
+                  }}>
                   <PillarCard
                     title={title}
                     subtitle={subtitle}

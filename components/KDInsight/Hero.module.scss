@@ -1,0 +1,103 @@
+@import '../../styles/variables.scss';
+
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 5.5rem;
+  background: linear-gradient(165deg, $page-bg 0%, $cream 42%, $page-bg-mid 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 85% 55% at 92% 8%, rgba($gold, 0.12) 0%, transparent 52%),
+      radial-gradient(ellipse 70% 50% at 4% 92%, rgba($ink, 0.04) 0%, transparent 48%),
+      radial-gradient(circle at 50% 120%, rgba($gold, 0.06) 0%, transparent 45%);
+    pointer-events: none;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(3.5rem, 10vh, 6rem);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.figure {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  box-shadow:
+    $shadow-md,
+    0 0 0 1px rgba($ink, 0.04);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.secondaryLink {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $ink;
+  border-bottom: 1px solid rgba($gold, 0.55);
+  padding-bottom: 4px;
+  transition: color $duration-fast $ease-out, border-color $duration-fast $ease-out;
+
+  &:hover {
+    color: $gold-dark;
+    border-bottom-color: $gold-dark;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .copy {
+    order: 0;
+  }
+
+  .figure {
+    order: 1;
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+  }
+}

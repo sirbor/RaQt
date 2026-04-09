@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+// Shared marketing section rhythm
+.section {
+  position: relative;
+  background: transparent;
+
+  &Inner {
+    max-width: 76rem;
+    margin: 0 auto;
+    padding: clamp(4.5rem, 10vw, 7.5rem) min(80px, 6%);
+  }
+
+  &Eyebrow {
+    display: block;
+    font-family: IBM Plex Sans, system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: $gold-dark;
+    margin-bottom: 1.35rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 3.25rem;
+      height: 2px;
+      margin-top: 1.35rem;
+      border-radius: 1px;
+      background: linear-gradient(90deg, $gold 0%, rgba($gold, 0.15) 65%, transparent 100%);
+    }
+  }
+
+  &Title {
+    font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+    font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+    font-weight: 400;
+    line-height: 1.11;
+    color: $ink;
+    letter-spacing: 0.018em;
+    margin: 0 0 1.5rem;
+    max-width: 28em;
+  }
+
+  &Lead {
+    font-size: 1.0625rem;
+    line-height: 1.78;
+    color: $gray-muted;
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    font-weight: 400;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Rule {
+    height: 1px;
+    background: linear-gradient(90deg, rgba($gold, 0.5) 0%, rgba($ink, 0.06) 100%);
+    margin: 0 min(80px, 6%);
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sectionInner {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .sectionRule {
+    margin: 0 1.5rem;
+  }
+}

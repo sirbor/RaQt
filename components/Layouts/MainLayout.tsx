@@ -15,15 +15,24 @@ const MainLayout: React.FC<Props> = ({ title, description, children, navbarProps
   const [open, setOpen] = useState(false);
   return (
     <React.Fragment>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Head>
+        {title ? <title>{title}</title> : null}
         <meta
-          name={description || 'description'}
-          content="Pillar is a commercial real estate investment platform designed to facilitate discovery, diligence, execution, and ongoing management of direct deals for institutional CRE investors (e.g. pensions/endowments/family offices/RIAs) and help sponsors efficiently manage capital throughout the lifecycle of an investment."
+          name="description"
+          content={
+            description ||
+            'KDInsight commerce infrastructure for sales, inventory, staff, payments, and hybrid channels. Built for SMEs in Kenya and East Africa, architected to scale globally with one connected record.'
+          }
         />
       </Head>
       <Navbar setOpen={() => setOpen(!open)} {...navbarProps} />
       <Sidebar open={open} setOpen={() => setOpen(!open)} />
-      {children}
+      <main id="main-content" tabIndex={-1}>
+        {children}
+      </main>
       <Footer />
     </React.Fragment>
   );

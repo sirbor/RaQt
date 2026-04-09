@@ -6,8 +6,7 @@ const ConfidentialityAgreement = () => {
   return (
     <MainLayout
       navbarProps={{
-        logoColor: 'white',
-        dark: true,
+        logoColor: 'black',
       }}>
       <Head>
         <title>Confidentiality Agreement - Pillar Markets</title>

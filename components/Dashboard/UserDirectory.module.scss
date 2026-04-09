@@ -1,0 +1,186 @@
+@import '../../styles/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid rgba($ink, 0.08);
+  border-radius: $radius-md;
+  padding: 1.75rem 1.5rem;
+}
+
+.panelTitle {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem;
+  color: $ink;
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: $gray-muted;
+  max-width: 36rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 22rem;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $ink-soft;
+}
+
+.codeBox {
+  background: rgba($gold, 0.08);
+  border: 1px solid rgba($gold, 0.28);
+  border-radius: $radius-md;
+  padding: 0.75rem;
+}
+
+.codeValue {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $ink;
+}
+
+.codeMeta {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  color: $gray-muted;
+}
+
+.input,
+.select {
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+  font-size: 0.9375rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba($ink, 0.15);
+  border-radius: $radius-md;
+  background: #ffffff;
+  color: $ink;
+
+  &:focus {
+    outline: none;
+    border-color: rgba($gold, 0.65);
+  }
+}
+
+.submit {
+  align-self: flex-start;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #8b2942;
+}
+
+.success {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #6b5a38;
+}
+
+.muted {
+  color: $gray-muted;
+  font-size: 0.875rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid rgba($ink, 0.08);
+  }
+
+  th {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $ink-soft;
+    font-weight: 600;
+  }
+}
+
+.dateCell {
+  color: $gray-muted;
+  white-space: nowrap;
+}
+
+.rowActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.deleteBtn {
+  border: 1px solid rgba(#9d3131, 0.45);
+  background: rgba(#9d3131, 0.06);
+  color: #9d3131;
+  border-radius: $radius-sm;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.55rem;
+  cursor: pointer;
+}
+
+.badgeAdmin,
+.badgeClient {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius-sm;
+}
+
+.badgeAdmin {
+  background: rgba($ink, 0.08);
+  color: $ink;
+}
+
+.badgeClient {
+  background: rgba($gold, 0.2);
+  color: $ink-soft;
+}

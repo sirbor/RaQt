@@ -1,0 +1,159 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  max-width: 52rem;
+}
+
+.lead {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: $gray-muted;
+  margin: 0 0 1rem;
+  max-width: 40rem;
+
+  code {
+    font-size: 0.85em;
+    color: $ink-soft;
+  }
+}
+
+.loadHint {
+  font-size: 0.8125rem;
+  color: $gold-dark;
+  margin: 0 0 1rem;
+}
+
+.saveError {
+  font-size: 0.875rem;
+  color: #8b2942;
+  margin: 0 0 1rem;
+  line-height: 1.45;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba($ink, 0.08);
+}
+
+.btnGhost {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid rgba($ink, 0.18);
+  border-radius: $radius-md;
+  background: #ffffff;
+  color: $ink;
+  cursor: pointer;
+  transition:
+    border-color $duration-fast $ease-out,
+    background $duration-fast $ease-out;
+
+  &:hover {
+    border-color: rgba($gold, 0.5);
+    background: rgba($gold, 0.06);
+  }
+}
+
+.saved {
+  font-size: 0.8125rem;
+  color: #2d6a4f;
+  align-self: center;
+  margin: 0;
+}
+
+.fieldset {
+  border: 1px solid rgba($ink, 0.1);
+  border-radius: $radius-lg;
+  padding: 1.35rem 1.35rem 1.5rem;
+  margin-bottom: 1.25rem;
+  background: #ffffff;
+}
+
+.legend {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  padding: 0 0.5rem;
+  color: $ink;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $ink-soft;
+  margin-bottom: 0.4rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+  font-size: 0.9375rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba($ink, 0.15);
+  border-radius: $radius-md;
+  background: #fafafa;
+  color: $ink;
+
+  &:focus {
+    outline: none;
+    border-color: rgba($gold, 0.55);
+    background: #ffffff;
+  }
+}
+
+.textarea {
+  min-height: 5rem;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: $gray-muted;
+  margin: 0.35rem 0 0;
+}
+
+.subHead {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: $ink;
+  margin: 1.25rem 0 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba($ink, 0.06);
+}
+
+.cardEditor {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px dashed rgba($ink, 0.12);
+  border-radius: $radius-md;
+  background: rgba($gold, 0.03);
+}

@@ -1,92 +1,183 @@
+@import '../../styles/variables.scss';
+
 .footer-section {
-  background-color: #000913;
-  padding: 40px;
-  padding-bottom: 0;
-  &-content {
+  position: relative;
+  background: $surface-elevated;
+  color: $ink;
+  padding: clamp(3.5rem, 8vw, 5rem) min(80px, 10%) 0;
+  border-top: 1px solid rgba($gold, 0.28);
+  box-shadow: 0 -12px 48px rgba(22, 22, 22, 0.04);
+
+  &-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+    align-items: start;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba($ink, 0.08);
+  }
+
+  &-brand {
+    max-width: 28rem;
+
+    .brandWordmark {
+      display: block;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: $gray-muted;
+      margin: 1.5rem 0 1rem;
+      font-weight: 400;
+    }
+
+    .email {
+      display: inline-flex;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $ink;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba($gold, 0.5);
+      padding-bottom: 2px;
+
+      &:hover {
+        color: $gold-dark;
+        border-bottom-color: $gold-dark;
+      }
+    }
+  }
+
+  &-social {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    .icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      border: 1px solid rgba($ink, 0.15);
+      background: $ivory;
+      color: $ink;
+      transition:
+        border-color $duration-fast $ease-out,
+        background $duration-fast $ease-out;
+
+      &:hover {
+        border-color: rgba($gold, 0.55);
+        background: $surface;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
     flex-direction: column;
-    color: white;
-    text-align: center;
-    p {
-      font-size: 24px;
-      margin: 48px 0;
+    gap: 0.5rem;
+    align-items: flex-end;
+
+    .navGroupTitle {
+      margin-top: 1.5rem;
     }
+
+    h2 {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: $gold-dark;
+      margin: 0 0 0.75rem;
+    }
+
     a {
-      margin-bottom: 16px;
-    }
-    .button-container {
-      .icon {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px;
-        border-radius: 50px;
-        border: 1px solid white;
-        margin-right: 16px;
+      font-size: 0.875rem;
+      color: $gray-muted;
+      text-decoration: none;
+      padding: 0.2rem 0;
+      transition: color $duration-fast $ease-out;
+
+      &:hover {
+        color: $ink;
       }
     }
   }
 
   &-disclaimer {
-    display: flex;
-    border-top: 1px solid rgb(136, 140, 147);
-    border-bottom: 1px solid rgb(136, 140, 147);
-    margin: 40px;
-    // margin-top: 40px;
-    // margin-bottom: 40px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 14px;
-    justify-content: left;
-    align-items: left;
-    color: gray;
-    text-align: left;
+    padding: 1.5rem 0;
+    font-size: 0.75rem;
+    line-height: 1.65;
+    color: $gray-muted;
+    max-width: 56rem;
+    font-weight: 400;
+
     a {
       text-decoration: underline;
+      text-underline-offset: 2px;
     }
   }
 
   footer {
-    padding: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 32px;
-    color: white;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.25rem 0 2.25rem;
+    border-top: 1px solid rgba($ink, 0.08);
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $gray-muted;
+
     p {
-      margin-bottom: 8px;
-      font-size: 14px;
-      margin-left: 32px;
+      margin: 0;
+      font-weight: 500;
     }
-    a {
-      font-size: 14px;
-      margin-left: 32px;
-      margin-bottom: 8px;
-      text-decoration: underline;
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+
+      a {
+        color: $gray-muted;
+        text-decoration: none;
+        font-size: 0.6875rem;
+        letter-spacing: 0.08em;
+
+        &:hover {
+          color: $ink;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-section {
+    &-top {
+      grid-template-columns: 1fr;
+    }
+
+    &-nav {
+      align-items: flex-start;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .footer-section {
-    padding: 24px;
-    padding-top: 40px;
-    padding-bottom: 60px;
-
-    &-disclaimer {
-      margin-left: 0;
-      margin-right: 0;
-    }
+    padding: 2.5rem 1.5rem 0;
 
     footer {
       flex-direction: column;
-      a,
-      p {
-        margin-left: 0;
-      }
+      align-items: flex-start;
     }
   }
 }

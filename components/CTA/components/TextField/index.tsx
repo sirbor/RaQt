@@ -1,64 +1,55 @@
 import { styled, TextField as MuiTextField, TextFieldProps } from '@mui/material';
 import React from 'react';
 
+const ink = '#1a1a1a';
+const muted = '#6b6b6b';
+const gold = '#a68b5b';
+
 const StyledTextField = styled(MuiTextField)`
   &.MuiInputBase-root {
-    color: #fff;
+    color: ${ink};
     &.MuiInput-root {
-      color: #fff;
+      color: ${ink};
       height: 30px;
-      color: #fff;
       font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
-      font-family: 'IBM Plex Sans';
+      font-size: 13px;
+      line-height: 1.4;
+      font-family: IBM Plex Sans, system-ui, sans-serif;
       margin-bottom: 24px;
     }
   }
 
-  /*
-  & .MuiInput-underline {
-    border-color: #fff;
-    &::after {
-      border-color: #fff;
-    }
-    &::before {
-      border-color: #fff;
-    }
-    &:active {
-      border-color: #fff;
-    }
-    &:hover {
-      border-color: #fff;
-    }
-  }*/
-
   input {
-    color: #fff;
+    color: ${ink};
     height: 30px;
     padding-bottom: 2px;
   }
 
   label {
-    color: #fff;
+    color: ${muted};
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     &.Mui-focused {
-      color: #fff;
+      color: ${gold};
     }
   }
 `;
 
-const TextField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
+const TextField: React.FC<Omit<TextFieldProps, 'variant'>> = (props) => {
+  const { InputProps: inputPropsProp, ...rest } = props;
   return (
-    <div style={{ borderBottom: '1px solid white' }}>
+    <div style={{ borderBottom: `1px solid rgba(26, 26, 26, 0.12)` }}>
       <StyledTextField
+        {...rest}
         variant="standard"
         fullWidth
-        color="secondary" // just force to white color
+        color="primary"
         InputProps={{
           required: true,
           disableUnderline: true,
+          ...inputPropsProp,
         }}
-        {...props}
       />
     </div>
   );

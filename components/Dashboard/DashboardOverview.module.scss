@@ -1,0 +1,330 @@
+@import '../../styles/variables.scss';
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  background: $surface-elevated;
+  border: 1px solid rgba($ink, 0.06);
+  border-radius: $radius-lg;
+  padding: 1.35rem 1.35rem 1.25rem;
+  box-shadow: $shadow-sm;
+  transition:
+    border-color $duration-med $ease-smooth,
+    box-shadow $duration-med $ease-smooth,
+    transform $duration-med $ease-smooth;
+
+  &:hover {
+    border-color: rgba($gold, 0.3);
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.statLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $gray-muted;
+  margin: 0 0 0.65rem;
+}
+
+.statValue {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: $ink;
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.statDelta {
+  font-size: 0.8125rem;
+  margin: 0;
+  font-weight: 500;
+
+  &.up {
+    color: #6e5a3a;
+  }
+
+  &.down {
+    color: $gray-muted;
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+  margin-bottom: 1.15rem;
+}
+
+.rangeControls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.rangeField {
+  display: grid;
+  gap: 0.25rem;
+
+  span {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $gray-muted;
+  }
+
+  input {
+    border: 1px solid rgba($ink, 0.14);
+    border-radius: $radius-sm;
+    padding: 0.45rem 0.55rem;
+    background: #fff;
+    color: $ink-soft;
+    font-size: 0.8rem;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: $surface-elevated;
+  border: 1px solid rgba($ink, 0.06);
+  border-radius: $radius-lg;
+  padding: 1.35rem 1.35rem 1.25rem;
+  box-shadow: $shadow-sm;
+}
+
+.panelHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.panelTitle {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.panelSub {
+  font-size: 0.8125rem;
+  color: $gray-muted;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.badge {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gold-dark;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba($gold, 0.4);
+  border-radius: $radius-sm;
+  background: rgba($gold, 0.08);
+  white-space: nowrap;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.55rem;
+  height: 160px;
+  padding-top: 0.5rem;
+}
+
+.chartBar {
+  flex: 1;
+  min-width: 0;
+  border-radius: $radius-sm $radius-sm 0 0;
+  background: linear-gradient(180deg, rgba($gold-light, 0.95) 0%, rgba($gold-dark, 0.75) 100%);
+  opacity: 0.9;
+  transition: opacity $duration-fast $ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.55rem;
+  margin-top: 0.65rem;
+}
+
+.chartLabel {
+  flex: 1;
+  text-align: center;
+  font-size: 0.6875rem;
+  color: $gray-muted;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin: 0 -0.25rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid rgba($ink, 0.06);
+}
+
+.table th {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $gray-muted;
+}
+
+.table tbody tr:hover td {
+  background: rgba($gold, 0.04);
+}
+
+.amount {
+  font-weight: 600;
+  color: $ink;
+  font-variant-numeric: tabular-nums;
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: $radius-sm;
+
+  &.paid {
+    background: rgba($gold, 0.15);
+    color: $gold-dark;
+  }
+
+  &.pending {
+    background: rgba($ink, 0.06);
+    color: $gray-muted;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba($ink, 0.06);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.listDot {
+  width: 6px;
+  height: 6px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: linear-gradient(135deg, $gold-light, $gold-dark);
+  flex-shrink: 0;
+}
+
+.listBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.listTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $ink;
+  margin: 0 0 0.2rem;
+}
+
+.listMeta {
+  font-size: 0.8125rem;
+  color: $gray-muted;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.listTime {
+  font-size: 0.75rem;
+  color: $gray-muted;
+  white-space: nowrap;
+}
+
+.ordersList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba($ink, 0.06);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.orderRight {
+  text-align: right;
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+}

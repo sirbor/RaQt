@@ -1,0 +1,198 @@
+@import '../../styles/variables.scss';
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.plan {
+  position: relative;
+  padding: 2.25rem 2rem;
+  border: 1px solid rgba($ink, 0.08);
+  border-radius: $radius-lg;
+  background: $surface-elevated;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+  box-shadow: $shadow-sm;
+  transition:
+    border-color $duration-med $ease-smooth,
+    box-shadow $duration-med $ease-smooth,
+    transform $duration-med $ease-smooth;
+
+  &:hover {
+    border-color: rgba($gold, 0.22);
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.planFeatured {
+  border-color: rgba($gold, 0.38);
+  box-shadow: $shadow-md;
+  padding-top: 3rem;
+}
+
+.planWaitlist {
+  border-color: rgba($gold, 0.28);
+  box-shadow: $shadow-md;
+  padding-top: 3rem;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: $ink;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0 $radius-lg 0 $radius-md;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.ribbonWaitlist {
+  background: $gold;
+  color: $ink;
+  letter-spacing: 0.12em;
+}
+
+.planName {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: $ink;
+}
+
+.planPrice {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: $ink;
+  margin: 0 0 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.per {
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: $gray-muted;
+  letter-spacing: 0.04em;
+}
+
+.features {
+  margin: 0;
+  padding: 0 0 0 1.1rem;
+  color: $gray-muted;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  flex: 1 1 auto;
+
+  li {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.planCta {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba($ink, 0.08);
+
+  a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.planNote {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: $gray-muted;
+}
+
+.examplesCard {
+  padding-top: 2.25rem;
+}
+
+.examplesMainTitle {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem;
+  color: $ink;
+}
+
+.examplesBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.exampleBlock {
+  margin: 0;
+}
+
+.exampleLabel {
+  margin: 0 0 0.35rem;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: $gray-muted;
+}
+
+.exampleAmount {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $ink;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.paystackSection {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba($ink, 0.08);
+}
+
+.paystackEyebrow {
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $gold-dark;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.paystackCopy {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: $gray-muted;
+}
+
+@media screen and (max-width: 1024px) {
+  .plans {
+    grid-template-columns: 1fr;
+  }
+}

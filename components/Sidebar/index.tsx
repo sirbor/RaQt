@@ -3,68 +3,55 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Link from 'next/link';
-import SecurityIcon from '@mui/icons-material/Security';
-import LockIcon from '@mui/icons-material/Lock';
-import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import CloseIcon from '@mui/icons-material/Close';
-import { IconButton, ListItemIcon } from '@mui/material';
+import { IconButton } from '@mui/material';
+import { SIGN_IN_HUB_PATH } from 'lib/authEntry';
 
-import { handleMoveToId } from 'utils';
-import { useRouter } from 'next/router';
+const ink = '#1a1a1a';
 
-const options = [
-  { title: 'Get Started' },
-  { title: 'Sponsors', link: '/sponsor' },
-  { title: 'About us', link: '/?about-us=true' },
-  { title: 'Careers', link: '/career' },
+const links = [
+  { title: 'Solutions', href: '/#solutions' },
+  { title: 'Use cases', href: '/#use-cases' },
+  { title: 'Pricing', href: '/#pricing' },
+  { title: 'Book A Demo', href: SIGN_IN_HUB_PATH },
 ];
 
 const Sidebar: React.FC<any> = ({ setOpen, open }) => {
-  const router = useRouter();
-  const handleButtonClick = () => {
-    router.pathname !== '/' && router.push('/?cta=true');
-    router.pathname === '/' && handleMoveToId();
-  };
-
-  const handleAboutUsClick = () => {
-    router.pathname !== '/' && router.push('/?about-us=true');
-    router.pathname === '/' && handleMoveToId('about-us');
-  };
-
   const list = () => (
-    <Box sx={{ width: 250 }} role="presentation">
-      <div
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'flex-end',
-          width: '100%',
-          display: 'flex',
-        }}>
-        <IconButton onClick={setOpen}>
-          <CloseIcon htmlColor="black" />
+    <Box sx={{ width: 300, pt: 1, bgcolor: '#ffffff' }} role="presentation">
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end', px: 1 }}>
+        <IconButton onClick={setOpen} aria-label="Close menu" size="large">
+          <CloseIcon sx={{ color: ink }} />
         </IconButton>
-      </div>
-      <List>
-        {options.map((option, index) => (
-          <ListItem button key={index}>
-            {/* <ListItemIcon>
-              <>
-                {index === 1 && <TextSnippetIcon />}
-                {index === 2 && <SecurityIcon />}
-                {index === 3 && <LockIcon />}
-              </>
-            </ListItemIcon> */}
-            <ListItemText>
-              {option.link ? (
-                <Link href={option.link}>
-                  <a onClick={option.title === 'About us' ? handleAboutUsClick : undefined}>{option.title}</a>
-                </Link>
-              ) : (
-                <a onClick={handleButtonClick}>{option.title}</a>
-              )}
-            </ListItemText>
+      </Box>
+      <List disablePadding sx={{ px: 1.5, pb: 2 }}>
+        {links.map((item) => (
+          <ListItem key={item.href} disablePadding sx={{ mb: 0.5 }}>
+            <ListItemButton
+              component={Link}
+              href={item.href}
+              onClick={setOpen}
+              sx={{
+                borderRadius: 1,
+                py: 1.25,
+                border: '1px solid rgba(26, 26, 26, 0.06)',
+                bgcolor: '#ffffff',
+                '&:hover': { bgcolor: '#ffffff', borderColor: 'rgba(166, 139, 91, 0.45)' },
+              }}>
+              <ListItemText
+                primary={item.title}
+                primaryTypographyProps={{
+                  fontWeight: 500,
+                  fontSize: '0.75rem',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: ink,
+                }}
+              />
+            </ListItemButton>
           </ListItem>
         ))}
       </List>
@@ -72,11 +59,20 @@ const Sidebar: React.FC<any> = ({ setOpen, open }) => {
   );
 
   return (
-    <div>
-      <Drawer anchor="right" open={open} onClose={setOpen}>
-        {list()}
-      </Drawer>
-    </div>
+    <Drawer
+      anchor="right"
+      open={open}
+      onClose={setOpen}
+      PaperProps={{
+        sx: {
+          borderTopLeftRadius: 12,
+          borderBottomLeftRadius: 12,
+          boxShadow: '0 24px 48px rgba(26, 26, 26, 0.1)',
+          borderLeft: '1px solid rgba(166, 139, 91, 0.35)',
+        },
+      }}>
+      {list()}
+    </Drawer>
   );
 };
 

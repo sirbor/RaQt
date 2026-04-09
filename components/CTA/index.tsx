@@ -11,10 +11,11 @@ import styles from './CTA.module.scss';
 
 const theme = createTheme({
   palette: {
+    primary: { main: '#1a1a1a' },
     secondary: {
-      main: '#fff',
-      light: '#fff',
-      dark: '#fff',
+      main: '#a68b5b',
+      light: '#c4a574',
+      dark: '#8a734a',
     },
   },
 });
@@ -98,18 +99,18 @@ const CTA = () => {
     <section id="cta" className={styles['cta']}>
       <div className={styles['cta-content']}>
         <div className={styles['cta-content-part']}>
-          <h4>Connect With Us</h4>
-          <p>Speak to a team member to learn more about the RAQT Solutions.</p>
+          <span className={styles.eyebrow}>Contact</span>
+          <h4>Connect with us</h4>
+          <p>Speak to a team member to learn more about RAQT Solutions.</p>
 
-          <div style={{ display: 'flex', alignItems: 'center', marginTop: '30px' }}>
-            <EmailIcon />
-            <span style={{ marginLeft: '20px' }}>
-              <a href="mailto:info@raqts.io">info@raqts.io</a>
-            </span>
+          <div className={styles.emailRow}>
+            <EmailIcon sx={{ opacity: 0.9 }} />
+            <a href="mailto:info@raqts.io">info@raqts.io</a>
           </div>
         </div>
         <ThemeProvider theme={theme}>
           <div className={styles['cta-content-part']}>
+            <div className={styles['form-shell']}>
             <form action={salesforceUrl} method="POST" target="_blank">
               <input type="hidden" name="oid" value="00D5f000006OVNu" />
               <input type="hidden" name="retURL" value={`${baseUrl}?success=true&cta=true`} />​
@@ -172,14 +173,14 @@ const CTA = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    color="secondary"
-                    style={{ height: 'auto', color: '#fff' }}
+                    color="primary"
+                    style={{ height: 'auto', color: '#1a1a1a' }}
                     id="description"
                     label="Message"
                     value={form.description}
                     onChange={(event) => handleChange(event, 'description')}
                     inputProps={{
-                      color: '#fff',
+                      color: '#1a1a1a',
                     }}
                     multiline
                     minRows={2}
@@ -207,6 +208,7 @@ const CTA = () => {
                 onClick={() => handleSubmit()}
               />
             </form>
+            </div>
           </div>
         </ThemeProvider>
       </div>

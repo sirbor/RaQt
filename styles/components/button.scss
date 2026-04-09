@@ -1,90 +1,103 @@
+@import '../variables.scss';
+
 .ui-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 48px;
-  font-size: 12px;
+  font-size: 0.6875rem;
   line-height: 1;
-  letter-spacing: normal;
-  padding: 0 16px;
+  letter-spacing: 0.14em;
+  padding: 0 1rem;
   outline: none;
   white-space: nowrap;
-  font-weight: 600;
-  border: solid 2px transparent;
+  font-weight: 500;
+  border: solid 1px transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  min-width: 110px;
+  min-width: auto;
   text-align: center;
   text-transform: uppercase;
   position: relative;
   text-decoration: none;
   appearance: none;
-  border-radius: 3px;
+  border-radius: $radius-md;
   background-color: transparent;
-  color: white;
+  color: $ink;
   width: auto;
+  transition:
+    background-color $duration-fast $ease-smooth,
+    color $duration-fast $ease-smooth,
+    border-color $duration-fast $ease-smooth,
+    transform $duration-fast $ease-smooth,
+    box-shadow $duration-fast $ease-smooth;
+
+  &:focus-visible {
+    outline: 1px solid $gold;
+    outline-offset: 3px;
+  }
 
   &.primary {
-    border: 2px solid white;
-    // font-weight: 600;
+    border-color: transparent;
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: transparent;
+      color: $ink;
     }
   }
 
   &.secondary {
-    border: 2px solid white;
-    background-color: white;
-    color: black;
+    border: 1px solid $ink;
+    background-color: transparent;
+    color: $ink;
     &:hover {
-      background-color: transparent;
-      color: white;
+      background-color: $ink;
+      color: $ivory;
     }
   }
 
+  &.link,
   &.link-trigger {
     border: none;
+    border-bottom: 1px solid transparent;
     height: auto;
-    padding: 0;
+    padding: 0.35rem 0;
     min-width: auto;
+    color: $ink;
+    border-radius: 0;
+
     &:hover {
       background-color: transparent;
-      color: white;
+      color: $ink;
+      border-bottom-color: $gold;
     }
   }
 
-  &.link {
-    padding: 0;
-    border: none;
-    height: auto;
-    min-width: auto;
-    color: black;
+  &.button,
+  &.button-trigger {
+    color: $ink;
+    border: 1px solid rgba($ink, 0.14);
+    min-width: 9.5rem;
+    box-shadow: $shadow-xs;
     &:hover {
-      background-color: transparent;
+      background-color: $ink;
+      color: $ivory;
+      border-color: $ink;
+      box-shadow: $shadow-sm;
+      transform: translateY(-1px);
     }
   }
 
-  &.button {
-    color: black;
-    border: solid 2px black;
-    &:hover {
-      background-color: transparent;
-    }
-    &-trigger {
-      color: white;
-      border: solid 2px white;
-    }
+  &.button-trigger {
+    color: $ink;
+    border-color: $ink;
   }
 
-  &.home {
-    color: white;
-    border-color: white;
-    &-trigger {
-      background-color: transparent;
-    }
+  &.home,
+  &.home-trigger {
+    color: $ink;
+    border-color: transparent;
     &:hover {
-      color: white;
+      color: $ink;
     }
   }
 }
@@ -93,30 +106,70 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 44px;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 12px 16px;
+  min-height: 48px;
+  font-size: 0.6875rem;
+  line-height: 1.25;
+  padding: 0.85rem 2rem;
   outline: none;
   white-space: nowrap;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  min-width: 146px;
+  min-width: 180px;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 500;
   position: relative;
   text-decoration: none;
   appearance: none;
-  border-radius: 4px;
-  background: #e72d65;
-  color: white;
+  border-radius: $radius-md;
+  background: $ink;
+  color: $ivory;
   width: auto;
-  border: none;
+  border: 1px solid $ink;
+  box-shadow: $shadow-sm;
+  transition:
+    background-color $duration-fast $ease-smooth,
+    color $duration-fast $ease-smooth,
+    border-color $duration-fast $ease-smooth,
+    transform $duration-fast $ease-smooth,
+    box-shadow $duration-fast $ease-smooth;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: $ivory;
+    color: $ink;
+    border-color: $ink;
+    box-shadow: $shadow-md;
+    filter: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $gold;
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: none;
+  }
 
   &.primary {
-    background-color: #00838f;
+    background: $ink;
+    color: $ivory;
+    border-color: $ink;
+
+    &:hover {
+      background: $ivory;
+      color: $ink;
+    }
   }
+
   &.tertiary {
-    background: #613ced;
+    background: $ink;
+    border-color: $ink;
+    &:hover {
+      background: transparent;
+      color: $ink;
+    }
   }
 }

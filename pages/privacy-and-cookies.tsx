@@ -6,8 +6,7 @@ const PrivacyPolicy = () => {
   return (
     <MainLayout
       navbarProps={{
-        logoColor: 'white',
-        dark: true,
+        logoColor: 'black',
       }}>
       <Head>
         <title>Privacy Policy - Pillar Markets</title>

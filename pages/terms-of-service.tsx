@@ -6,8 +6,7 @@ const TermsOfService = () => {
   return (
     <MainLayout
       navbarProps={{
-        logoColor: 'white',
-        dark: true,
+        logoColor: 'black',
       }}>
       <Head>
         <title>Terms and Conditions - Pillar Markets</title>

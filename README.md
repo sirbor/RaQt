@@ -1,27 +1,105 @@
-# RAQT
+# KDInsight
 
-RAQT is at the forefront of data-driven innovation. Our mission is to harness the power of data to drive financial excellence.
+KDInsight is a data and growth intelligence company helping retail and
+multi-branch businesses turn operational data into clear commercial decisions.
 
-We offer advanced solutions in research, quantitative analysis, fintech development, and data analytics, tailored to meet the needs of our diverse clientele.
+This repository powers the KDInsight web experience, including:
 
-## Our Pillars
+- the public marketing site,
+- account registration and sign-in,
+- administrator workspace tools, and
+- the client demo marketplace where use cases can be added to cart and ordered.
 
-### Research Solutions
-**Subtitle:** Comprehensive market and competitive analysis.
+## Company Profile
 
-**Description:** Our Research Solutions provide in-depth market and competitive analysis to help you understand industry dynamics and identify growth opportunities. Through a blend of qualitative and quantitative research methods, we deliver comprehensive reports that highlight market trends, consumer behavior, and competitive positioning. Our tailored research reports address specific business challenges, offering actionable insights and strategic recommendations to guide your decision-making and drive success.
+KDInsight combines analytics, product thinking, and implementation support
+to help business teams:
 
-### Quantitative Analysis
-**Subtitle:** Advanced data modeling and risk management.
+- improve sales visibility,
+- optimize inventory and branch operations,
+- understand customer behavior, and
+- prioritize high-impact growth actions.
 
-**Description:** RAQT’s Quantitative Analysis services include advanced data modeling and algorithm development to support sophisticated financial decision-making. We create predictive models and develop custom algorithms that solve complex financial problems, such as automated trading and risk assessment. Our risk assessment techniques evaluate credit, market, and operational risks, providing detailed reports and strategies to mitigate potential impacts and enhance financial stability.
+## Product Areas
 
-### Data Analytics
-**Subtitle:** Business intelligence and data visualization.
+### Marketing Website
 
-**Description:** RAQT’s Data Analytics services harness the power of big data to deliver actionable insights and drive business decisions. We utilize cutting-edge technologies to analyze large datasets and provide interactive business intelligence dashboards. Our data visualization tools present complex information in an easily understandable format, enabling you to make informed decisions and optimize your business strategies based on real-time data insights.
+- Brand messaging, service pillars, and conversion-focused sections.
+- "Book A Demo" flows connected to account onboarding.
 
-### Fintech Solutions
-**Subtitle:** Custom software development and payment integration.
+### Client Demo Marketplace
 
-**Description:** Our Fintech Solutions focus on developing customized software and integrating payment systems to enhance your financial operations. We design and build bespoke fintech applications tailored to your needs, ensuring seamless integration with payment gateways like Stripe and Visa. Additionally, we offer virtual card solutions that support multiple currencies and transaction types, enhancing security and flexibility for your financial transactions.
+- Authenticated client page at `/demo`.
+- Demo use cases displayed as cards.
+- Cart functionality (add, remove, quantity updates).
+- Demo order placement with optional notes.
+
+### Admin Workspace
+
+- Dashboard shell and overview.
+- User directory and role-based access controls.
+- Home page content management tools.
+
+## Current Core Features
+
+- Email/password authentication (client and admin roles).
+- Role-aware post-login routing:
+  - clients -> `/demo`
+  - admins -> `/dashboard`
+- Session handling via JWT cookie + session storage metadata.
+- Prisma + PostgreSQL persistence for users, content, demo catalog, cart, and orders.
+
+## Tech Stack
+
+- Next.js + React + TypeScript
+- SCSS modules
+- Prisma ORM
+- PostgreSQL
+
+## Local Development
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Configure environment
+
+Create `.env.local` and provide at least:
+
+- `DATABASE_URL`
+- `ADMIN_JWT_SECRET` (minimum 32 characters)
+
+### 3) Run database migrations
+
+```bash
+npm run db:migrate
+```
+
+### 4) Generate Prisma client (if needed)
+
+```bash
+npm run db:generate
+```
+
+### 5) Start development server
+
+```bash
+npm run dev
+```
+
+## Useful Scripts
+
+- `npm run dev` - start local dev server
+- `npm run build` - production build
+- `npm run start` - run production server
+- `npm run db:migrate` - apply migrations
+- `npm run db:generate` - regenerate Prisma client
+- `npm run db:seed` - seed a local login user
+
+## Notes
+
+- Use the account hub (`/sign-in`) to choose register or sign in.
+- Client accounts are directed to the demo use-case marketplace.
+- Admin accounts are directed to the dashboard and management tools.

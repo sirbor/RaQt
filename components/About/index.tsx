@@ -57,13 +57,14 @@ const About = () => {
   return (
     <section id="about-us" className={styles.about}>
       <div className={styles['about-header']}>
-        <h3>About Us</h3>
+        <span className={styles.eyebrow}>Team</span>
+        <h3>About us</h3>
         <p>
-          RAQT is at the forefront of data-driven innovation. Our mission is to harness the power of data 
-          to drive financial excellence.
+          RAQT is at the forefront of data-driven innovation. Our mission is to harness the power of data to
+          drive financial excellence.
         </p>
         <p>
-          We offer advanced solutions in research, quantitative analysis, fintech development, and data 
+          We offer advanced solutions in research, quantitative analysis, fintech development, and data
           analytics, tailored to meet the needs of our diverse clientele.
         </p>
       </div>

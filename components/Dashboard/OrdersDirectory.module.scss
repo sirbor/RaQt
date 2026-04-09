@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+
+.panel {
+  background: #ffffff;
+  border: 1px solid rgba($ink, 0.08);
+  border-radius: $radius-md;
+  padding: 1.5rem;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.lead {
+  margin: 0.45rem 0 1rem;
+  color: $gray-muted;
+  font-size: 0.9rem;
+}
+
+.refreshBtn {
+  border: 1px solid rgba($ink, 0.16);
+  border-radius: $radius-md;
+  background: #fff;
+  color: $ink-soft;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.52rem 0.75rem;
+  cursor: pointer;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.65rem 0.72rem;
+    border-bottom: 1px solid rgba($ink, 0.08);
+    vertical-align: top;
+  }
+
+  th {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $ink-soft;
+    font-weight: 600;
+  }
+}
+
+.reference {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace;
+  font-size: 0.76rem;
+}
+
+.amount {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.notes {
+  color: $gray-muted;
+}
+
+.date {
+  color: $gray-muted;
+  white-space: nowrap;
+}
+
+.badgePlaced,
+.badgePending {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.46rem;
+  border-radius: $radius-sm;
+}
+
+.badgePlaced {
+  background: rgba($gold, 0.2);
+  color: $ink-soft;
+}
+
+.badgePending {
+  background: rgba($ink, 0.08);
+  color: $ink;
+}
+
+.muted {
+  color: $gray-muted;
+}
+
+.error {
+  color: #8b2942;
+}

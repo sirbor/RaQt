@@ -1,12 +1,47 @@
+@import 'variables.scss';
+
 html,
 body {
   scroll-behavior: smooth;
-  font-family: IBM Plex Sans !important;
+  font-family: IBM Plex Sans, system-ui, sans-serif !important;
+  background: $page-bg;
+  color: $ink;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba($gold, 0.25);
+  color: $ink;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+  padding: 0.85rem 1.25rem;
+  background: $ink;
+  color: #ffffff !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba($gold, 0.5);
+
+  &:focus {
+    left: 1rem;
+    top: 1rem;
+    outline: 2px solid $gold;
+    outline-offset: 2px;
+  }
 }
 
 * {
@@ -23,25 +58,25 @@ a {
   }
 }
 
-// mui class
+// Mui: light luxury form fields (contact sections)
 .MuiInputBase-root {
-  color: white;
+  color: $ink;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  border-color: #fff;
+  font-size: 13px;
+  line-height: 1.4;
+  border-color: rgba($ink, 0.2);
 }
 
 .MuiInput-root {
-  color: white;
+  color: $ink;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  border-color: #fff;
+  font-size: 13px;
+  line-height: 1.4;
+  border-color: rgba($ink, 0.2);
 }
 
 .MuiInputBase-inputMultiline {
-  color: white !important;
+  color: $ink !important;
 }
 
 @media screen and (max-width: 600px) {

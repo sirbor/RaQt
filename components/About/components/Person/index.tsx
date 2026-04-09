@@ -18,9 +18,9 @@ const Person: React.FC<Props> = ({ person, styles, show, toggleShow }) => {
           <p>{person.role}</p>
         </div>
         <p className={styles['description']}>{show ? person.description : person.summary}</p>
-        <p onClick={toggleShow} className={styles['show']}>
-          {show ? 'Hide' : 'Expand'}
-        </p>
+        <button type="button" onClick={toggleShow} className={styles['show']}>
+          {show ? 'Show less' : 'Read more'}
+        </button>
       </div>
     </div>
   );

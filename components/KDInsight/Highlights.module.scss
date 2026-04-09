@@ -1,0 +1,101 @@
+@import '../../styles/variables.scss';
+
+.wrap {
+  border-top: 1px solid rgba($ink, 0.05);
+  border-bottom: 1px solid rgba($ink, 0.05);
+  background: linear-gradient(180deg, transparent 0%, rgba($ivory, 0.35) 50%, transparent 100%);
+}
+
+.gridTitle {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: $ink;
+  margin: 0 0 1rem;
+  max-width: 26em;
+}
+
+.intro {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: $gray-muted;
+  max-width: 40rem;
+  margin: 0 0 2.5rem;
+  font-weight: 400;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.5rem;
+}
+
+.card {
+  padding: 1.75rem 1.6rem;
+  border: 1px solid rgba($ink, 0.07);
+  border-radius: $radius-lg;
+  background: $surface-elevated;
+  box-shadow: $shadow-xs;
+  transition:
+    border-color $duration-med $ease-smooth,
+    box-shadow $duration-med $ease-smooth,
+    transform $duration-med $ease-smooth;
+
+  &:hover {
+    border-color: rgba($gold, 0.32);
+    box-shadow: $shadow-md;
+    transform: translateY(-3px);
+  }
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($gold, 0.26);
+  border-radius: $radius-md;
+  margin-bottom: 1.15rem;
+  background: linear-gradient(145deg, rgba($gold, 0.08) 0%, rgba($ivory, 0.9) 100%);
+}
+
+.cardTitle {
+  font-family: IBM Plex Sans, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $ink;
+  margin: 0 0 0.75rem;
+  line-height: 1.35;
+}
+
+.cardBody {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: $gray-muted;
+
+  @media screen and (min-width: 1025px) {
+    font-size: 0.90625rem;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

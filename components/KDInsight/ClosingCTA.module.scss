@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.cta {
+  background: linear-gradient(180deg, $page-bg 0%, $cream 100%);
+  border-top: 1px solid rgba($gold, 0.22);
+  padding-bottom: clamp(4rem, 12vw, 6.5rem);
+}
+
+.panel {
+  max-width: 46rem;
+  padding: clamp(2.75rem, 6vw, 3.75rem) clamp(1.5rem, 4vw, 2.25rem);
+  margin-top: 1rem;
+  background: $surface-elevated;
+  border: 1px solid rgba($ink, 0.06);
+  border-radius: $radius-xl;
+  box-shadow: $shadow-md;
+}
+
+.title {
+  font-family: var(--font-display), 'Playfair Display', ui-serif, Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: $ink;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+
+.lead {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: $gray-muted;
+  margin: 0 0 2rem;
+  max-width: 32rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.ghost {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $ink;
+  border-bottom: 1px solid rgba($gold, 0.5);
+  padding-bottom: 4px;
+
+  &:hover {
+    color: $gold-dark;
+    border-bottom-color: $gold-dark;
+  }
+}

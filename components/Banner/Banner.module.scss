@@ -1,7 +1,10 @@
+@import '../../styles/variables.scss';
+
 .banner {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin-bottom: 0;
   background-size: cover;
   background-position: center center;
@@ -9,48 +12,101 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  color: white;
+  color: $ink;
+
   &::before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
-    left: 0;
-    top: 0;
+    inset: 0;
+    background: linear-gradient(
+      115deg,
+      rgba($ivory, 0.97) 0%,
+      rgba($ivory, 0.88) 38%,
+      rgba($cream, 0.45) 68%,
+      rgba($ivory, 0.2) 100%
+    );
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba($ivory, 1) 0%, transparent 42%);
+    z-index: 1;
+    pointer-events: none;
   }
 
   &-content {
+    position: relative;
     z-index: 2;
-    max-width: min(100%, 956px);
-    .button-container {
-      margin-top: 20px;
-    }
-  }
+    max-width: min(100%, 42rem);
+    padding-bottom: clamp(2.5rem, 7vh, 5.5rem);
 
-  p {
-    max-width: min(100%, 750px);
+    .eyebrow {
+      display: block;
+      font-family: IBM Plex Sans, system-ui, sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: $gold-dark;
+      margin-bottom: 1.25rem;
+      padding: 0;
+      border: none;
+      background: none;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 2.75rem;
+        height: 1px;
+        background: linear-gradient(90deg, $gold 0%, transparent 100%);
+        margin-top: 1rem;
+      }
+    }
+
+    h1 {
+      color: $ink;
+      text-shadow: none;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    p.large {
+      max-width: 32rem;
+      color: $gray-muted;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    .button-container {
+      margin-top: 2rem;
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .banner h1 {
-    font-size: 2.5rem;
-    line-height: 40px;
+  .banner {
+    min-height: 88vh;
+
+    &-content {
+      padding-bottom: 3rem;
+    }
   }
 }
+
 @media screen and (max-width: 900px) and (orientation: landscape) {
   .banner {
-    p {
-      &.large {
-        font-size: 14px !important;
-        line-height: 16px !important;
-        margin-bottom: 16px !important;
-      }
+    min-height: 100vh;
+
+    p.large {
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
     }
+
     h1 {
-      font-size: 2rem;
-      line-height: 40px;
+      font-size: clamp(1.85rem, 4vw, 2.5rem);
     }
   }
 }
